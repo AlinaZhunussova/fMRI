@@ -23,6 +23,7 @@ function successVDM = createVDM_SPM12(current_id, base_path)
 SPM_PATH      = '/path/to/spm12';                          % SPM12 root
 FIELDMAP_PATH = fullfile(SPM_PATH, 'toolbox', 'FieldMap'); % FieldMap toolbox
 FIELDMAP_T1   = fullfile(FIELDMAP_PATH, 'T1.nii');         % template for brain masking
+% BEST comment everis
 
 % -------------------------------------------------------------------------
 
@@ -58,7 +59,6 @@ matlabbatch = {};
 matlabbatch{1}.spm.tools.fieldmap.calculatevdm.subj.data.presubphasemag.phase     = phase_img;
 matlabbatch{1}.spm.tools.fieldmap.calculatevdm.subj.data.presubphasemag.magnitude = mag_img;
 
-% Fieldmap parameters
 matlabbatch{1}.spm.tools.fieldmap.calculatevdm.subj.defaults.defaultsval.et        = [4.92 7.38]; % echo times (ms): short TE, long TE
 matlabbatch{1}.spm.tools.fieldmap.calculatevdm.subj.defaults.defaultsval.maskbrain = 1;            % skull-strip fieldmap
 matlabbatch{1}.spm.tools.fieldmap.calculatevdm.subj.defaults.defaultsval.blipdir   = -1;           % phase-encode blip direction
