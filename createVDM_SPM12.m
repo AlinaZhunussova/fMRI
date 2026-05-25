@@ -8,9 +8,6 @@ function successVDM = createVDM_SPM12(current_id, base_path)
 %
 % OUTPUT:
 %   successVDM  - logical; true if VDM file was created successfully
-%
-% DEPENDENCIES:
-%   SPM12 with FieldMap toolbox
 
 SPM_PATH      = '/path/to/spm12';                          % SPM12 root
 FIELDMAP_PATH = fullfile(SPM_PATH, 'toolbox', 'FieldMap'); % FieldMap toolbox
